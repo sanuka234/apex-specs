@@ -260,15 +260,17 @@ footer {
 
     /* 2. Turn the horizontal navigation links into a neat column */
     .navbar {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    padding: 15px 0;
+}
 
-    nav a {
-        margin: 5px 10px;
-        display: inline-block;
-    }
+nav a {
+    display: block;
+    margin: 8px 0;
+    font-size: 0.85rem;
+}
 
     /* 3. Shrink the huge hero text so it doesn't spill over */
     .hero-content h1 {
