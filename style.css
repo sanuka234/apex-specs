@@ -1,0 +1,249 @@
+/* Core Styling Layout Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Makes clicking nav links scroll smoothly down the page */
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #0b0b0b;
+    color: #f5f5f5;
+    line-height: 1.7;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.red-text {
+    color: #e02424;
+}
+
+/* Header & Navbar Section */
+header {
+    background-color: rgba(0, 0, 0, 0.95);
+    border-bottom: 2px solid #e02424;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    margin-left: 30px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #e02424;
+}
+
+/* Big Hero Section with Background image fallback tint */
+.hero-banner {
+    background-image: url('https://wieck-nissanao-production.s3.us-west-1.amazonaws.com/releaseInlineImages/78ce2cdc42e8dbb7a12294cd30b294e6740708e0');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    height: 80vh;
+}
+
+.hero-overlay {
+    background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.4));
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #e02424;
+    color: #ffffff;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    border-radius: 3px;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #b91c1c;
+}
+
+/* Section Components structure */
+.section {
+    padding: 80px 0;
+}
+
+.dark-section {
+    background-color: #121212;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #888888;
+    margin-bottom: 50px;
+    font-size: 1.05rem;
+}
+
+/* Responsive Image Cards Grid */
+.features-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.feature-card {
+    flex: 1;
+    background-color: #161616;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures image fits inside borders */
+    border: 1px solid #222222;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px); /* Lift animation effect */
+}
+
+.card-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Keeps image proportions clean without squishing */
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card-body h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+/* Styling Data Tables */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+}
+
+th, td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #222222;
+}
+
+th {
+    background-color: #1a1a1a;
+    color: #e02424;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+tr:hover {
+    background-color: rgba(224, 36, 36, 0.05); /* Soft red line hover highlight */
+}
+
+/* Alternate 2-Column Row Block Section */
+.alignment-block {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.text-block, .image-block {
+    flex: 1;
+}
+
+.text-block h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.responsive-img {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Footer layout rules */
+footer {
+    background-color: #000000;
+    text-align: center;
+    padding: 30px 0;
+    color: #555555;
+    font-size: 0.85rem;
+    border-top: 1px solid #111111;
+}
+
+/* Mobile Responsiveness adjustments */
+@media (max-width: 768px) {
+    .navbar, .features-grid, .alignment-block {
+        flex-direction: column;
+        gap: 20px;
+    }
+    nav a {
+        margin: 10px;
+    }
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+}
