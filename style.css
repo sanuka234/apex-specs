@@ -429,6 +429,116 @@ nav a {
     font-size: 0.85rem;
 }
 
+/* ==========================================
+   APEX SPECS HOME PAGE GARAGE CARDS
+   ========================================== */
+.garage-section {
+    background-color: #0b0b0b;
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* Clickable Card Outer Container */
+.car-card {
+    background-color: #111111;
+    border: 1px solid #222222;
+    border-radius: 6px;
+    overflow: hidden;
+    text-decoration: none; /* Removes underline from links */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Hover Animation */
+.car-card:hover {
+    transform: translateY(-8px);
+    border-color: #e50914; /* Red accent glow border */
+    box-shadow: 0 10px 20px rgba(229, 9, 20, 0.15);
+}
+
+.card-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.car-card:hover .card-image img {
+    transform: scale(1.05); /* Soft image zoom on hover */
+}
+
+.card-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.car-brand {
+    color: #888888;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.card-info h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.car-brief {
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.view-spec-tag {
+    color: #e50914;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.2s ease;
+}
+
+/* Grayed out style for future cars */
+.locked-card {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.locked-card:hover {
+    transform: none;
+    border-color: #222222;
+    box-shadow: none;
+}
+.locked-card .view-spec-tag {
+    color: #666666;
+}
+    
     /* 3. Shrink the huge hero text so it doesn't spill over */
     .hero-content h1 {
         font-size: 2.2rem;
