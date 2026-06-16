@@ -233,7 +233,67 @@ footer {
     font-size: 0.85rem;
     border-top: 1px solid #111111;
 }
+/* ==========================================
+   SPECIFICATIONS SECTION STYLES
+   ========================================== */
+.specs-section {
+    background-color: #0b0b0b; /* Deep dark background matching the theme */
+    padding: 60px 0;
+    border-top: 2px solid #e50914; /* Red accent separator line */
+}
 
+.section-title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.specs-display {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.specs-graphic {
+    flex: 1;
+    text-align: center;
+}
+
+.specs-graphic img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    filter: grayscale(20%) brightness(90%);
+}
+
+.specs-data {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 5px;
+    border-bottom: 1px solid #222222; /* Clean subtle rows */
+}
+
+.spec-label {
+    color: #888888; /* Muted technical gray label */
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.spec-value {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
 /* Mobile Responsiveness adjustments */
 @media (max-width: 768px) {
     .navbar, .features-grid, .alignment-block {
