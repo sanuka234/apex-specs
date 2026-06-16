@@ -294,6 +294,103 @@ footer {
     font-weight: 500;
     font-size: 0.95rem;
 }
+/* ==========================================
+   LEGACY SECTION STYLES
+   ========================================== */
+.legacy-section {
+    background-color: #111111;
+    padding: 60px 0;
+    border-top: 1px solid #222222;
+}
+
+.legacy-title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.legacy-layout {
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.legacy-grid {
+    flex: 1.2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.legacy-box {
+    background-color: #0b0b0b;
+    padding: 22px;
+    border-left: 3px solid #e50914; /* Red accent line */
+    border-radius: 4px;
+}
+
+.legacy-box h3 {
+    color: #e50914;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.legacy-box p {
+    color: #cccccc;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Nissan Image Box Styles */
+.legacy-image-box {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #0b0b0b;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #222222;
+}
+
+.legacy-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(85%) contrast(105%);
+}
+
+.image-caption {
+    color: #888888;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 12px 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #0b0b0b;
+    border-top: 1px solid #1a1a1a;
+}
+
+/* Mobile responsive layout fallback */
+@media (max-width: 992px) {
+    .legacy-layout {
+        flex-direction: column;
+    }
+    .legacy-image-box {
+        order: -1; /* Puts image above text on mobile devices */
+        height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .legacy-grid {
+        grid-template-columns: 1fr;
+    }
+}
 /* Mobile Responsiveness adjustments */
 @media (max-width: 768px) {
     .navbar, .features-grid, .alignment-block {
