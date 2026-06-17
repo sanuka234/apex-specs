@@ -399,6 +399,21 @@ footer {
     display: block;
     object-fit: cover;
 }
+
+/* ==========================================
+   SUPRA MKV SPECIFIC STYLES
+   ========================================== */
+.supra-hero {
+    background-image: url('https://images.unsplash.com/photo-1654704092211-dd7c1075d13c?q=80&w=1200&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Mobile responsive layout fallback */
+@media (max-width: 992px) {
+
+
+
 /* Mobile responsive layout fallback */
 @media (max-width: 992px) {
     .legacy-layout {
