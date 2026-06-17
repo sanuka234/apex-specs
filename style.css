@@ -609,34 +609,39 @@ nav a {
             font-size: 1.8rem;
         }
 
-        /* Fixes the layout mismatch and text spacing for Technical Specifications */
-        .spec-split {
-            display: flex;
-            align-items: center; /* Centers the text box vertically with the image */
-            gap: 40px; /* Gives nice breathing room between the photo and text */
-        }
+       /* --- Global Specs Table Layout (Works on Desktop) --- */
+.spec-split {
+    display: flex;
+    align-items: center;      /* Centers the entire text block vertically with your photo */
+    gap: 50px;                /* Creates perfect breathing room between photo and text */
+}
 
-        .spec-details-box {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 100%;
-        }
+.spec-details-box {
+    flex: 1;                  /* Allows the specs to fill out the available space evenly */
+}
 
-        .spec-list .spec-row {
-            display: flex;
-            justify-content: space-between; /* Pushes labels to left, values to right */
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Adds a clean separator line */
-            font-size: 0.95rem;
-        }
+.spec-list {
+    width: 100%;
+}
 
-        .spec-list .spec-row span {
-            color: #888; /* Makes the labels slightly muted */
-            font-weight: 600;
-        }
+.spec-list .spec-row {
+    display: flex;
+    justify-content: space-between; /* Snaps label to left, value to right */
+    align-items: center;
+    padding: 20px 0;                /* Adds the identical spacious spacing from your GT-R image */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Creates the clean separating lines */
+}
 
-        .spec-list .spec-row strong {
-            color: #fff; /* Makes the values stand out bright */
-        }
+.spec-list .spec-row span {
+    color: #888888;                 /* Muted gray label color */
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.spec-list .spec-row strong {
+    color: #ffffff;                 /* Solid bright white specs text */
+    font-weight: 500;
+    font-size: 1rem;
+  }
 }
