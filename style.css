@@ -605,7 +605,38 @@ nav a {
     }
     
     /* Ensure the text section drops a bit of space below it */
-    .text-block h2 {
-        font-size: 1.8rem;
-    }
+        .text-block h2 {
+            font-size: 1.8rem;
+        }
+
+        /* Fixes the layout mismatch and text spacing for Technical Specifications */
+        .spec-split {
+            display: flex;
+            align-items: center; /* Centers the text box vertically with the image */
+            gap: 40px; /* Gives nice breathing room between the photo and text */
+        }
+
+        .spec-details-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .spec-list .spec-row {
+            display: flex;
+            justify-content: space-between; /* Pushes labels to left, values to right */
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Adds a clean separator line */
+            font-size: 0.95rem;
+        }
+
+        .spec-list .spec-row span {
+            color: #888; /* Makes the labels slightly muted */
+            font-weight: 600;
+        }
+
+        .spec-list .spec-row strong {
+            color: #fff; /* Makes the values stand out bright */
+        }
 }
