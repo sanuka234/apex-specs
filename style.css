@@ -646,23 +646,26 @@ nav a {
   }
 }
 
-/* --- Garage Grid & Locked Card Layout --- */
-.card-image-wrapper {
-    position: relative;
+/* --- Garage Grid & Locked Card Layout Fixes --- */
+.car-card {
+    position: relative; /* Essential to keep overlays bound inside the card */
+}
+
+.car-card .card-image {
+    position: relative; /* Forces the lock overlay to stay strictly inside the image box */
     width: 100%;
     overflow: hidden;
-    border-radius: 8px;
 }
 
 .locked-card {
     cursor: not-allowed;
-    opacity: 0.7; /* Makes the card look dim/unfocused */
+    opacity: 0.75;
     transition: all 0.3s ease;
 }
 
 .locked-card:hover {
-    opacity: 0.85;
-    transform: scale(1.02); /* Slight scale pop to show it is clickable but locked */
+    opacity: 0.9;
+    transform: scale(1.02);
 }
 
 .lock-overlay {
@@ -671,12 +674,13 @@ nav a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Darkens the car image */
+    background: rgba(0, 0, 0, 0.65); /* Darkens the background smoothly */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+    z-index: 2;
 }
 
 .lock-icon {
@@ -684,12 +688,12 @@ nav a {
 }
 
 .coming-soon-text {
-    color: #ff3333; /* Aggressive racing red text */
+    color: #ff3333;
     font-weight: 700;
     letter-spacing: 2px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     border: 1px solid #ff3333;
     padding: 4px 12px;
     border-radius: 4px;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.8);
 }
